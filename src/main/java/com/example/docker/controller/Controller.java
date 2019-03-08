@@ -45,7 +45,7 @@ public class Controller {
 		} catch (Exception ex) {
 			System.out.println(ex);
 		}
-		return "created..!";
+		return "Created..!";
 	}
 
 	@DeleteMapping(path = "/{country_id}")
@@ -55,6 +55,6 @@ public class Controller {
 		} catch (Exception ex) {
 			System.out.println(ex);
 		}
-		return "deleted..!";
+		return "Deleted..!";
 	}
 }
