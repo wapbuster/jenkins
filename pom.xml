@@ -26,9 +26,30 @@
 		</dependency>
 
 		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>2.6.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>2.6.1</version>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.15</version>
 		</dependency>
 	</dependencies>
 
@@ -38,26 +59,15 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			
-			<!-- <plugin>
-				<groupId>com.spotify</groupId>
-				<artifactId>docker-maven-plugin</artifactId>
-				<configuration>
-					<imageName>docker-learn</imageName>
-					<baseImage>java:8</baseImage>
-					<entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
-					copy the service's jar file from target into the root directory 
-						of the image
-					<resources>
-						<resource>
-							<targetPath>/</targetPath>
-							<directory>${project.build.directory}</directory>
-							<include>${project.build.finalName}.jar</include>
-						</resource>
-					</resources>
-				</configuration>
-			</plugin> -->
-			
+
+			<!-- <plugin> <groupId>com.spotify</groupId> <artifactId>docker-maven-plugin</artifactId> 
+				<configuration> <imageName>docker-learn</imageName> <baseImage>java:8</baseImage> 
+				<entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint> 
+				copy the service's jar file from target into the root directory of the image 
+				<resources> <resource> <targetPath>/</targetPath> <directory>${project.build.directory}</directory> 
+				<include>${project.build.finalName}.jar</include> </resource> </resources> 
+				</configuration> </plugin> -->
+
 		</plugins>
 		<finalName>docker-learn</finalName>
 	</build>
